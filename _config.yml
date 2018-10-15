@@ -22,18 +22,21 @@ contact:
 footer:
   section_id: footer
   copyright: '&copy; Untitled. All rights reserved.'
-sass:
-  palette: blue
-  palettes:
-    blue:
+palette: blue
+palettes:
+  blue:
+    sass:
       bg_alt: '#472e68'
       accent1: '#00a6d9'
-    green:
+  green:
+    sass:
       bg_alt: '#2b5a96'
       accent1: '#39a288'
-    red:
+  red:
+    sass:
       bg_alt: '#403f87'
       accent1: '#b7475a'
+sass:
   indentWidth: 4
   style: nested
   precision: 10

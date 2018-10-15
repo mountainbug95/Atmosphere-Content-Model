@@ -29,7 +29,7 @@ $font: (
 );
 
 // Palette.
-{% assign palette = site.sass.palettes[site.sass.palette] %}
+{% assign palette = site.palettes[site.palette].sass %}
 $palette: (
     bg:					#fff,
     bg-alt:				{{ palette.bg_alt }},

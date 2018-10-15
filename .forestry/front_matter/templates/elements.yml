@@ -8,13 +8,9 @@ fields:
     description: The title of the page
     config:
       required: true
-  - type: textarea
+  - type: text
     name: subtitle
     label: Subtitle
     description: Text that is shown just above the title
-    config:
-      wysiwyg: true
-      schema:
-        format: markdown
 pages:
   - elements.md
