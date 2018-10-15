@@ -5,31 +5,6 @@ fields:
   - type: text
     name: section_id
     label: Element ID
-  - type: select
-    name: background_style
-    label: The background style of the section
-    config:
-      required: true
-      source:
-        type: custom
-      options:
-        - style1
-        - style2
-  - type: field_group_list
-    name: features
-    label: The list of features
-    config:
-      labelField: title
-    fields:
-      - type: text
-        name: title
-        label: Title
-      - type: text
-        name: text
-        label: Feature Description
-      - type: text
-        name: icon
-        label: Icon
   - type: text
     name: component
     hidden: true
