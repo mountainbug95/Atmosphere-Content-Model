@@ -32,9 +32,7 @@ fields:
       - type: text
         name: icon
         label: Icon
-        description: >-
-          The name of the icon to display for the feature (example:
-          fa-bar-chart)
+        description: Font Awesome Icons
   - type: text
     name: component
     hidden: true

@@ -64,7 +64,7 @@ fields:
     description: Excerpt to be displayed in any thumbnails for the post
   - type: datetime
     name: date
-    label: Date (YYYY-MM-DD)
+    label: Date
   - type: file
     name: alt_img_path
     label: Alternate Image
