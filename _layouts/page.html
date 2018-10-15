@@ -1,0 +1,20 @@
+---
+layout: body
+---
+
+    <!-- Main -->
+    <section id="main" class="wrapper alt">
+        <div class="inner">
+            
+            <header class="major special">
+                {{ page.subtitle | markdownify }}
+                <h1>{{ page.title }}</h1>
+            </header>
+            
+            {% if page.content_img_path %}
+                <a href="#" class="image main"><img src="{{ page.content_img_path | relative_url }}" alt="" /></a>
+            {% endif %}
+            {{ content }}
+            
+        </div>
+    </section>

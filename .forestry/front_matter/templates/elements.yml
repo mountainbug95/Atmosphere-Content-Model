@@ -1,0 +1,20 @@
+---
+label: Elements
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+    description: The title of the page
+    config:
+      required: true
+  - type: textarea
+    name: subtitle
+    label: Subtitle
+    description: Text that is shown just above the title
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+pages:
+  - elements.md

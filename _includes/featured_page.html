@@ -1,0 +1,25 @@
+<!-- Three -->
+<section id="{{ include.section.section_id }}" class="wrapper {{ include.section.background_style }}">
+    {% assign arr = include.site.pages | where_exp: 'item', 'item.home_sections.featured_page != nil' | sort: 'home_sections.featured_page.weight' %}
+    {% for page in arr %}
+        <div class="inner">
+            <header class="major alt">
+                <p>{{ page.subtitle }}</p>
+                <h2>{{ page.title }}</h2>
+            </header>
+            <section class="posts">
+                <article>
+                    {% if page.home_sections.featured_page.home_img_path %}
+                        <span class="image"><img src="{{ page.home_sections.featured_page.home_img_path | relative_url }}" alt=""></span>
+                    {% endif %}
+                    <div class="content">
+                        <p>{{ page.home_sections.featured_page.excerpt }}</p>
+                        <ul class="actions">
+                            <li><a href="{{ page.url | relative_url }}" class="button">More</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </div>
+    {% endfor %}
+</section>

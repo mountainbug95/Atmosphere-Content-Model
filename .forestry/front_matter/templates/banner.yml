@@ -1,0 +1,25 @@
+---
+label: Banner
+is_partial: true
+fields:
+  - type: text
+    name: section_id
+    label: Element ID
+    description: The element id of the banner element
+  - type: text
+    name: title
+    label: Title
+  - type: text
+    name: subtitle
+    label: Subtitle
+  - type: field_group_list
+    name: actions
+    label: Action Buttons
+    description: List of action buttons
+    config:
+      labelField: label
+    fields:
+      - type: include
+        name: include_action
+        label: Action
+        template: action

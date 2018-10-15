@@ -1,0 +1,21 @@
+<!-- Header -->
+<header id="header"{% if page.layout == 'home' %} class="alt"{% endif %}>
+    <span class="logo"><a href="{{ site.baseurl | relative_url }}">{{ site.title }}</a></span>
+    <a href="#menu">Menu</a>
+</header>
+
+<!-- Nav -->
+<nav id="menu">
+    <div class="inner">
+        <h2>Menu</h2>
+        <ul class="links">
+            {% for item in site.menus.main %}
+                <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+            {% endfor %}
+            {% for action in site.menu.buttons %}
+                <li><a href="{{ action.url | link | relative_url }}">{{ action.label }}</a></li>
+            {% endfor %}
+        </ul>
+        <a class="close">Close</a>
+    </div>
+</nav>

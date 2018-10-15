@@ -1,0 +1,31 @@
+<!-- Four -->
+<section id="{{ include.section.section_id }}" class="wrapper {{ include.section.background_style }} alt">
+    <div class="inner">
+        <header class="major">
+            <p>{{ include.section.subtitle }}</p>
+            <h2>{{ include.section.title }}</h2>
+        </header>
+        <section class="timeline">
+            {% assign slice_length = include.section.num_posts_displayed | minus: 0 %}
+            {% assign display_posts = include.site.posts | slice: 0, slice_length %}
+            {% assign arr = display_posts | sort: 'date' | reverse %}
+            {% for post in arr %}
+                <section>
+                    <header>
+                        <p>{{ post.date | date: '%m.%d.%y' }}</p>
+                        <h4>{{ post.title }}</h4>
+                    </header>
+                    {% if post.alt_img_path %}
+                        <span class="image"><img src="{{ post.alt_img_path | relative_url }}" alt=""></span>
+                    {% endif %}
+                    <div class="content">
+                        <p>{{ post.excerpt }}</p>
+                        <ul class="actions">
+                            <li><a href="{{ post.url | relative_url }}" class="button">More</a></li>
+                        </ul>
+                    </div>
+                </section>
+            {% endfor %}
+        </section>
+    </div>
+</section>
