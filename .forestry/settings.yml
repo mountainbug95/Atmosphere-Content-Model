@@ -10,6 +10,11 @@ sections:
   - type: jekyll-posts
     label: Posts
     create: all
+  - type: document
+    label: Config
+    path: _config.yml
+    templates:
+      - config
 upload_dir: uploads
 public_path: /uploads
 front_matter_path: ''
