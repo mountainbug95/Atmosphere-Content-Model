@@ -58,22 +58,8 @@ fields:
     default: page
     config:
       required: true
-  - type: text
-    name: excerpt
-    label: Home Excerpt
-    description: Excerpt to be displayed in any thumbnails for the post
-  - type: datetime
-    name: date
-    label: Date
-  - type: file
-    name: alt_img_path
-    label: Alternate Image
-    description: image to be displayed in any thumbnails for the post
 pages:
   - dolor.md
   - fusce.md
   - generic.md
   - ipsum.md
-  - _posts/2016-09-04-magna.md
-  - _posts/2016-08-28-sed.md
-  - _posts/2016-08-22-tellus.md
