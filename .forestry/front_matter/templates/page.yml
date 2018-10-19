@@ -58,6 +58,17 @@ fields:
     default: page
     config:
       required: true
+  - type: text
+    name: excerpt
+    label: Home Excerpt
+    description: Excerpt to be displayed in any thumbnails for the post
+  - type: datetime
+    name: date
+    label: Date
+  - type: file
+    name: alt_img_path
+    label: Alternate Image
+    description: image to be displayed in any thumbnails for the post
 pages:
   - dolor.md
   - fusce.md
