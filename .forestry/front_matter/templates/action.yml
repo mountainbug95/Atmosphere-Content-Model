@@ -14,7 +14,9 @@ fields:
     name: is_primary
     label: Is Primary
     description: Use primary theme color
+    default: true
   - type: boolean
     name: is_scrolly
     label: Is Scrolly
     description: 'If action button links to an element inside a page, set to true'
+    default: false

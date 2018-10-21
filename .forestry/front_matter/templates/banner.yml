@@ -9,9 +9,13 @@ fields:
   - type: text
     name: title
     label: Title
-  - type: text
+  - type: textarea
     name: subtitle
     label: Subtitle
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
   - type: field_group_list
     name: actions
     label: Action Buttons

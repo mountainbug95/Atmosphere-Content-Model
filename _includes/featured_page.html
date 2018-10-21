@@ -4,7 +4,7 @@
     {% for page in arr %}
         <div class="inner">
             <header class="major alt">
-                <p>{{ page.subtitle }}</p>
+                {{ page.subtitle | markdownify }}
                 <h2>{{ page.title }}</h2>
             </header>
             <section class="posts">

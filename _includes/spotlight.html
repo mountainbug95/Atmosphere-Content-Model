@@ -6,7 +6,7 @@
             {% for page in arr %}
                 <article>
                     <header class="major">
-                        <p>{{ page.subtitle }}</p>
+                        {{ page.subtitle | markdownify }}
                         <h2>{{ page.title }}</h2>
                     </header>
                     <p>{{ page.home_sections.spotlight.excerpt }}</p>

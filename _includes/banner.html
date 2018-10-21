@@ -1,7 +1,7 @@
 <!-- Banner -->
 <section id="{{ page.banner.section_id }}">
     <div class="inner">
-        <p>{{ page.banner.subtitle }}</p>
+        {{ page.banner.subtitle | markdownify }}
         <h1>{{ page.banner.title }}</h1>
         {% if page.banner.actions %}
             <ul class="actions special">
