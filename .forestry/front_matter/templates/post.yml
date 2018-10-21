@@ -65,8 +65,6 @@ fields:
   - type: datetime
     name: date
     label: Date
-    config:
-      required: true
   - type: file
     name: alt_img_path
     label: Alternate Image
