@@ -4,6 +4,7 @@ subtitle: Lorem
 content_img_path: images/pic01.jpg
 home_sections:
   spotlight:
+    enabled: true
     weight: 2
     excerpt: >-
       Phasellus in ante vitae nibh porttitor tempus vitae ut ante. Vestibulum

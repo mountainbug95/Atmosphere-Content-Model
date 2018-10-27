@@ -2,7 +2,7 @@
 <section id="{{ include.section.section_id }}" class="wrapper {{ include.section.background_style }}">
     <div class="inner">
         <section class="spotlights">
-            {% assign arr = include.site.pages | where_exp: 'item', 'item.home_sections.spotlight != nil' | sort: 'home_sections.spotlight.weight' %}
+            {% assign arr = include.site.pages | where_exp: 'item', 'item.home_sections.spotlight.enabled == true' | sort: 'home_sections.spotlight.weight' %}
             {% for page in arr %}
                 <article>
                     <header class="major">

@@ -1,6 +1,6 @@
 <!-- Three -->
 <section id="{{ include.section.section_id }}" class="wrapper {{ include.section.background_style }}">
-    {% assign arr = include.site.pages | where_exp: 'item', 'item.home_sections.featured_page != nil' | sort: 'home_sections.featured_page.weight' %}
+    {% assign arr = include.site.pages | where_exp: 'item', 'item.home_sections.featured_page.enabled == true' | sort: 'home_sections.featured_page.weight' %}
     {% for page in arr %}
         <div class="inner">
             <header class="major alt">

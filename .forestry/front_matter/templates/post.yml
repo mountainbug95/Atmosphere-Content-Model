@@ -27,6 +27,11 @@ fields:
       - type: field_group
         name: spotlight
         fields:
+          - type: boolean
+            name: enabled
+            label: Enabled
+            description: Enables the home spotlight section for the page
+            default: false
           - type: number
             name: weight
             label: Weight
@@ -39,6 +44,11 @@ fields:
         name: featured_page
         label: Featured Page
         fields:
+          - type: boolean
+            name: enabled
+            label: Enabled
+            description: Enables the home featured page section for the page
+            default: false
           - type: number
             name: weight
             label: Weight

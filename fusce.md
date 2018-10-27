@@ -4,6 +4,7 @@ subtitle: Consequat
 content_img_path: images/pic01.jpg
 home_sections:
   featured_page:
+    enabled: true
     weight: 1
     excerpt: >-
       Phasellus in ante vitae nibh porttitor tempus vitae ante. Lorem blandit
