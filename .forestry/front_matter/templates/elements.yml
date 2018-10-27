@@ -3,13 +3,6 @@ label: Elements
 is_partial: false
 fields:
   - type: text
-    name: template
-    label: Template
-    hidden: true
-    default: elements
-    config:
-      required: true
-  - type: text
     name: title
     label: Title
     description: The title of the page
