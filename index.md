@@ -13,7 +13,7 @@ sections:
   - section_id: spotlight
     background_style: style2
     component: spotlight.html
-    template: spotlight
+    widget: spotlight
   - section_id: features
     background_style: style1
     features:
@@ -30,17 +30,17 @@ sections:
         text: Lorem ipsum dolor sit amet nullam et consequat.
         icon: fa-file-image-o
     component: features.html
-    template: features
+    widget: features
   - section_id: featured-page
     component: featured_page.html
-    template: featured_page
+    widget: featured_page
   - title: Aliquam tincidunt mauris eu risus
     subtitle: Malesuada
     background_style: style2
     section_id: posts
     num_posts_displayed: 3
     component: posts.html
-    template: posts
+    widget: posts
 menus:
   main:
     title: Home

@@ -12,5 +12,12 @@ fields:
     name: subtitle
     label: Subtitle
     description: Text that is shown just above the title
+  - type: text
+    name: template
+    label: Template
+    hidden: true
+    default: elements
+    config:
+      required: true
 pages:
   - elements.md

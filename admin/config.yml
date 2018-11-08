@@ -1,0 +1,472 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: uploads
+public_folder: /uploads
+collections:
+  - name: config
+    label: Config
+    files:
+      - name: config
+        label: Config
+        file: _config.yml
+        fields:
+          - name: title
+            label: Title
+            widget: text
+            required: true
+          - name: menu
+            widget: object
+            required: false
+            label: Menu Configuration
+            fields:
+              - name: buttons
+                widget: list
+                required: false
+                label: Buttons
+                hint: The menu buttons
+                fields:
+                  - name: label
+                    widget: string
+                    required: false
+                    label: Button Label
+                  - name: url
+                    widget: string
+                    required: false
+                    label: Button URL
+          - name: contact
+            widget: object
+            required: false
+            label: Contact Configuration
+            fields:
+              - name: social_icons
+                widget: list
+                required: false
+                label: Social Icons
+                hint: Contact methods
+                fields:
+                  - name: title
+                    widget: string
+                    required: false
+                    label: Title
+                    hint: The name of the contact method
+                  - name: text
+                    widget: text
+                    required: false
+                    label: Contact Description
+                    hint: The contact method description
+                  - name: icon
+                    widget: string
+                    required: false
+                    label: Icon
+                    hint: Font Awesome Icons
+          - name: footer
+            widget: object
+            required: false
+            label: Footer Configuration
+            fields:
+              - name: section_id
+                widget: hidden
+                required: true
+                label: Section ID
+                default: footer
+              - name: copyright
+                widget: string
+                required: false
+                label: Footer Copyright
+          - name: palette
+            widget: select
+            required: false
+            label: Color Palette
+            options:
+              - blue
+              - green
+              - red
+          - name: palettes
+            widget: hidden
+            required: false
+  - name: home
+    label: Home
+    files:
+      - name: home
+        label: Home
+        file: index.md
+        fields:
+          - name: title
+            widget: string
+            required: true
+            label: Title
+            hint: The title of the page
+          - name: banner
+            widget: object
+            required: false
+            label: Banner
+            fields:
+              - name: section_id
+                widget: string
+                required: false
+                label: Element ID
+                hint: The element id of the banner element
+              - name: title
+                widget: string
+                required: false
+                label: Title
+              - name: subtitle
+                widget: markdown
+                required: false
+                label: Subtitle
+              - name: actions
+                widget: list
+                required: false
+                label: Action Buttons
+                hint: List of action buttons
+                fields:
+                  - name: label
+                    widget: string
+                    required: false
+                    label: Label
+                    hint: The button label
+                  - name: url
+                    widget: string
+                    required: false
+                    label: URL
+                  - name: is_primary
+                    widget: boolean
+                    required: false
+                    label: Is Primary
+                    default: true
+                    hint: Use primary theme color
+                  - name: is_scrolly
+                    widget: boolean
+                    required: false
+                    label: Is Scrolly
+                    default: false
+                    hint: >-
+                      If action button links to an element inside a page, set to
+                      true
+          - name: sections
+            widget: list
+            required: false
+            label: Sections
+            hint: Home sections
+            types:
+              - name: spotlight
+                widget: object
+                label: Spotlight Section
+                fields:
+                  - name: section_id
+                    widget: string
+                    required: false
+                    label: Element ID
+                  - name: background_style
+                    widget: select
+                    required: true
+                    label: The background style of the section
+                    options:
+                      - style1
+                      - style2
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: spotlight.html
+              - name: features
+                widget: object
+                label: Features Section
+                fields:
+                  - name: section_id
+                    widget: string
+                    required: false
+                    label: Element ID
+                  - name: background_style
+                    widget: select
+                    required: true
+                    label: The background style of the section
+                    options:
+                      - style1
+                      - style2
+                  - name: features
+                    widget: list
+                    required: false
+                    label: The list of features
+                    fields:
+                      - name: title
+                        widget: string
+                        required: false
+                        label: Title
+                        hint: The feature title
+                      - name: text
+                        widget: string
+                        required: false
+                        label: Text
+                        hint: The feature description
+                      - name: icon
+                        widget: string
+                        required: false
+                        label: Icon
+                        hint: Font Awesome Icons
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: features.html
+              - name: featured_page
+                widget: object
+                label: Featured Page Section
+                fields:
+                  - name: section_id
+                    widget: string
+                    required: false
+                    label: Element ID
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: featured_page.html
+              - name: posts
+                widget: object
+                label: Posts Section
+                fields:
+                  - name: section_id
+                    widget: string
+                    required: false
+                    label: Element ID
+                  - name: title
+                    widget: string
+                    required: false
+                    label: Title
+                    hint: The section title
+                  - name: subtitle
+                    widget: string
+                    required: false
+                    label: Subtitle
+                    hint: The small text above the section title
+                  - name: background_style
+                    widget: select
+                    required: true
+                    label: The background style of the section
+                    options:
+                      - style1
+                      - style2
+                  - name: num_posts_displayed
+                    widget: number
+                    required: true
+                    label: Number of displayed posts
+                    valueType: int
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: posts.html
+          - name: layout
+            widget: hidden
+            required: true
+            label: Layout
+            default: home
+  - name: elements
+    label: Elements
+    files:
+      - name: elements
+        label: Elements
+        file: elements.md
+        fields:
+          - name: title
+            widget: string
+            required: true
+            label: Title
+            hint: The title of the page
+          - name: subtitle
+            widget: string
+            required: false
+            label: Subtitle
+            hint: Text that is shown just above the title
+          - name: layout
+            widget: hidden
+            required: true
+            label: Layout
+            default: elements
+          - name: body
+            label: Content
+            widget: markdown
+  - name: page
+    label: Pages
+    folder: /
+    filter:
+      field: layout
+      value: page
+    create: true
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - name: title
+        widget: string
+        required: true
+        label: Title
+        hint: The title of the page
+      - name: subtitle
+        widget: markdown
+        required: false
+        label: Subtitle
+        hint: Text that is shown just above the title
+      - name: content_img_path
+        widget: image
+        required: false
+        label: Image
+        hint: The image shown on top of the page
+      - name: home_sections
+        widget: object
+        required: false
+        label: Home Sections
+        fields:
+          - name: spotlight
+            widget: object
+            required: false
+            fields:
+              - name: enabled
+                widget: boolean
+                required: false
+                label: Enabled
+                default: false
+                hint: Enables the home spotlight section for the page
+              - name: weight
+                widget: number
+                required: false
+                label: Weight
+                hint: The order of the page inside home spotlight section
+                valueType: int
+              - name: excerpt
+                widget: text
+                required: false
+                label: Excerpt
+                hint: whatever
+          - name: featured_page
+            widget: object
+            required: false
+            label: Featured Page
+            fields:
+              - name: enabled
+                widget: boolean
+                required: false
+                label: Enabled
+                default: false
+                hint: Enables the home featured page section for the page
+              - name: weight
+                widget: number
+                required: false
+                label: Weight
+                hint: The order of the page inside home spotlight section
+                valueType: int
+              - name: excerpt
+                widget: text
+                required: false
+                label: Excerpt
+                hint: whatever
+              - name: home_img_path
+                widget: image
+                required: false
+                label: Image
+                hint: Image shown in featured page list
+      - name: layout
+        widget: hidden
+        required: true
+        label: Layout
+        default: page
+      - name: body
+        label: Content
+        widget: markdown
+  - name: post
+    label: Posts
+    folder: _posts
+    filter:
+      field: layout
+      value: page
+    create: true
+    extension: md
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - name: title
+        widget: string
+        required: true
+        label: Title
+        hint: The title of the page
+      - name: subtitle
+        widget: markdown
+        required: false
+        label: Subtitle
+        hint: Text that is shown just above the title
+      - name: content_img_path
+        widget: image
+        required: false
+        label: Image
+        hint: The image shown on top of the page
+      - name: home_sections
+        widget: object
+        required: false
+        label: Home Sections
+        fields:
+          - name: spotlight
+            widget: object
+            required: false
+            fields:
+              - name: enabled
+                widget: boolean
+                required: false
+                label: Enabled
+                default: false
+                hint: Enables the home spotlight section for the page
+              - name: weight
+                widget: number
+                required: false
+                label: Weight
+                hint: The order of the page inside home spotlight section
+                valueType: int
+              - name: excerpt
+                widget: text
+                required: false
+                label: Excerpt
+                hint: whatever
+          - name: featured_page
+            widget: object
+            required: false
+            label: Featured Page
+            fields:
+              - name: enabled
+                widget: boolean
+                required: false
+                label: Enabled
+                default: false
+                hint: Enables the home featured page section for the page
+              - name: weight
+                widget: number
+                required: false
+                label: Weight
+                hint: The order of the page inside home spotlight section
+                valueType: int
+              - name: excerpt
+                widget: text
+                required: false
+                label: Excerpt
+                hint: whatever
+              - name: home_img_path
+                widget: image
+                required: false
+                label: Image
+                hint: Image shown in featured page list
+      - name: layout
+        widget: hidden
+        required: true
+        label: Layout
+        default: page
+      - name: excerpt
+        widget: string
+        required: false
+        label: Home Excerpt
+        hint: Excerpt to be displayed in any thumbnails for the post
+      - name: date
+        widget: date
+        required: true
+        label: Date
+      - name: alt_img_path
+        widget: image
+        required: false
+        label: Alternate Image
+        hint: image to be displayed in any thumbnails for the post
+      - name: body
+        label: Content
+        widget: markdown
