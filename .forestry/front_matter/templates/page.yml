@@ -62,8 +62,8 @@ fields:
             label: Image
             description: Image shown in featured page list
   - type: text
-    name: template
-    label: Template
+    name: layout
+    label: Layout
     hidden: true
     default: page
     config:

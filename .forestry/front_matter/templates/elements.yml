@@ -13,8 +13,8 @@ fields:
     label: Subtitle
     description: Text that is shown just above the title
   - type: text
-    name: template
-    label: Template
+    name: layout
+    label: Layout
     hidden: true
     default: elements
     config:

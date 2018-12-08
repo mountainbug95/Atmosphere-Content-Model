@@ -7,6 +7,7 @@ fields:
     label: Element ID
   - type: text
     name: component
+    label: Component
     hidden: true
     default: featured_page.html
     config:

@@ -73,3 +73,32 @@ fields:
         - blue
         - green
         - red
+  - type: field_group
+    name: palettes
+    label: Palettes
+    hidden: true
+    fields:
+      - type: field_group
+        name: blue
+        label: Blue
+        fields:
+          - type: include
+            name: include_palette
+            label: Palette
+            template: palette
+      - type: field_group
+        name: green
+        label: Green
+        fields:
+          - type: include
+            name: include_palette
+            label: Palette
+            template: palette
+      - type: field_group
+        name: red
+        label: Red
+        fields:
+          - type: include
+            name: include_palette
+            label: Palette
+            template: palette

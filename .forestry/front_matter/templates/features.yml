@@ -35,6 +35,7 @@ fields:
         description: Font Awesome Icons
   - type: text
     name: component
+    label: Component
     hidden: true
     default: features.html
     config:

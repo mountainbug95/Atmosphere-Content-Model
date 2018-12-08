@@ -17,6 +17,7 @@ fields:
         - style2
   - type: text
     name: component
+    label: Component
     hidden: true
     default: spotlight.html
     config:
