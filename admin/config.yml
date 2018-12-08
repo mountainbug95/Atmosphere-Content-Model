@@ -85,6 +85,7 @@ collections:
           - name: palettes
             widget: hidden
             required: false
+            label: Palettes
   - name: home
     label: Home
     files:
@@ -168,6 +169,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Component
                     default: spotlight.html
               - name: features
                 widget: object
@@ -207,6 +209,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Component
                     default: features.html
               - name: featured_page
                 widget: object
@@ -219,6 +222,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Component
                     default: featured_page.html
               - name: posts
                 widget: object
@@ -253,6 +257,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Component
                     default: posts.html
           - name: layout
             widget: hidden
