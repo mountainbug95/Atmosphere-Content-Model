@@ -4,17 +4,16 @@ is_partial: true
 display_field: title
 fields:
   - type: text
-    name: section_id
-    label: Element ID
-  - type: text
     name: title
-    label: Title
+    label: Section Title
     description: >-
       The section title (Used by the CMS, even if it is not displayed in the
       section)
-    default: Spotlight Section
     config:
       required: true
+  - type: text
+    name: section_id
+    label: Element ID
   - type: select
     name: background_style
     label: The background style of the section

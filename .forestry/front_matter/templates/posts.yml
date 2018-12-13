@@ -8,7 +8,7 @@ fields:
     label: Element ID
   - type: text
     name: title
-    label: Title
+    label: Section Title
     description: >-
       The section title (Used by the CMS, even if it is not displayed in the
       section)
