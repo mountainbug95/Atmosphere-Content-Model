@@ -10,11 +10,13 @@ banner:
       is_primary: true
       is_scrolly: true
 sections:
-  - section_id: spotlight
+  - title: Spotlight Section
+    section_id: spotlight
     background_style: style2
     component: spotlight.html
     template: spotlight
-  - section_id: features
+  - title: Features Section
+    section_id: features
     background_style: style1
     features:
       - title: Placerat
@@ -31,7 +33,8 @@ sections:
         icon: fa-file-image-o
     component: features.html
     template: features
-  - section_id: featured-page
+  - title: Featured Page Section
+    section_id: featured-page
     component: featured_page.html
     template: featured_page
   - title: Aliquam tincidunt mauris eu risus
