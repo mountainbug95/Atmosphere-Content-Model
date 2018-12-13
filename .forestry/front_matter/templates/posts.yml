@@ -1,6 +1,7 @@
 ---
 label: Posts Section
 is_partial: true
+display_field: title
 fields:
   - type: text
     name: section_id
@@ -8,7 +9,12 @@ fields:
   - type: text
     name: title
     label: Title
-    description: The section title
+    description: >-
+      The section title (Used by the CMS, even if it is not displayed in the
+      section)
+    default: Posts Section
+    config:
+      required: true
   - type: text
     name: subtitle
     label: Subtitle
